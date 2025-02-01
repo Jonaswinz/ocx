@@ -191,6 +191,20 @@ namespace ocx {
             return;
         }
 
+        virtual size_t get_context_size() override{
+            return 0;
+        }
+
+        virtual int save_context(char* save) override{
+            (void)save;
+            return -1;
+        }
+
+        virtual int restore_context(char* save) override{
+            (void)save;
+            return -1;
+        }
+
         virtual bool trace_insns(bool on) override {
             (void)on;
             auto env_ext = dynamic_cast<env_trace_insns_extension*>(&m_env);

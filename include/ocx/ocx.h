@@ -162,6 +162,10 @@ namespace ocx {
 
         virtual void tb_flush() = 0;
         virtual void tb_flush_page(u64 start, u64 end) = 0;
+        
+        virtual size_t get_context_size() = 0;
+        virtual int save_context(char* save) = 0;
+        virtual int restore_context(char* save) = 0;
     };
 
     class core_inv_range_extension
