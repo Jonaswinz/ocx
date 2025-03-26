@@ -205,6 +205,10 @@ namespace ocx {
             return -1;
         }
 
+        virtual void trigger_nvic_irq(u8 irqnum){
+            (void)irqnum;
+        }
+
         virtual bool trace_insns(bool on) override {
             (void)on;
             auto env_ext = dynamic_cast<env_trace_insns_extension*>(&m_env);

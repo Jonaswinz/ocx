@@ -166,6 +166,7 @@ namespace ocx {
         virtual size_t get_context_size() = 0;
         virtual int save_context(char* save) = 0;
         virtual int restore_context(char* save) = 0;
+        virtual void trigger_nvic_irq(u8 irqnum) = 0;
     };
 
     class core_inv_range_extension
